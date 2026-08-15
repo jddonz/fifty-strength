@@ -1,0 +1,64 @@
+name: PR checks
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check JavaScript syntax
+        run: |
+          set -e
+          found=0
+          while IFS= read -r -d '' f; do
+            found=1
+            echo "node --check $f"
+            node --check "$f"
+          done < <(find . -name '*.js' -not -path './node_modules/*' -print0)
+          if [ "$found" -eq 0 ]; then
+            echo "No .js files found."
+          fi
+
+      - name: Check manifest is valid JSON
+        run: |
+          set -e
+          if [ -f manifest.webmanifest ]; then
+            python3 -m json.tool manifest.webmanifest > /dev/null
+            echo "manifest.webmanifest is valid JSON"
+          fi
+
+      - name: Check local asset references resolve
+        run: |
+          set -e
+          if [ ! -f index.html ]; then
+            echo "No index.html found."
+            exit 0
+          fi
+          missing=0
+          # Pull href="..." / src="..." values, skip absolute URLs, protocol-relative, and anchors.
+          refs=$(grep -oE '(href|src)="[^"]+"' index.html | sed -E 's/^(href|src)="//; s/"$//')
+          while IFS= read -r ref; do
+            [ -z "$ref" ] && continue
+            case "$ref" in
+              http://*|https://*|//*|\#*|mailto:*|tel:*) continue ;;
+            esac
+            path="${ref%%\?*}"
+            path="${path%%\#*}"
+            if [ ! -f "$path" ]; then
+              echo "::error file=index.html::Referenced asset not found: $path"
+              missing=1
+            fi
+          done <<< "$refs"
+          if [ "$missing" -ne 0 ]; then
+            echo "One or more referenced assets are missing."
+            exit 1
+          fi
+          echo "All local asset references resolve."

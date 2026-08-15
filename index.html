@@ -2,25 +2,333 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#111827">
-<meta name="description" content="Privacy-first 8-week strength and CrossFit foundation workout app.">
+<meta name="description" content="Reference guide for an 8-week strength + CrossFit foundation program. Read-only — workouts are logged in Hevy.">
 <link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Fifty Strength">
 <link rel="stylesheet" href="styles.css">
 <title>Fifty Strength</title>
 </head>
 <body>
-<header class="app-header">
-  <div><div class="eyebrow">8-WEEK FOUNDATION</div><h1>Fifty Strength</h1></div>
-  <button id="installBtn" class="secondary hidden">Install</button>
+<header>
+  <h1>8-Week Strength + CrossFit Foundation</h1>
+  <p>3 strength days/week · optional walking &amp; mobility · knee-aware progression</p>
+  <nav aria-label="Phase navigation">
+    <button data-phase="phase1">Phase 1 · Weeks 1–2</button>
+    <button data-phase="phase2">Phase 2 · Weeks 3–4</button>
+    <button data-phase="phase3">Phase 3 · Weeks 5–6</button>
+    <button data-phase="phase4">Phase 4 · Weeks 7–8</button>
+  </nav>
 </header>
-<nav class="tabs" aria-label="Main navigation">
-  <button class="tab active" data-view="today">Today</button>
-  <button class="tab" data-view="program">Program</button>
-  <button class="tab" data-view="progress">Progress</button>
-</nav>
-<main id="app" class="container"></main>
-<footer>Local-first · No account · No workout data leaves this device</footer>
+
+<main>
+<section id="phase1" class="phase">
+  <div class="hero">
+    <h2>Phase 1 — Learn the Movements</h2>
+    <div class="weeks">Weeks 1–2</div>
+    <div class="grid">
+      <div class="info">
+        <h3>Goals</h3>
+        <ul>
+          <li>Establish the 3-day training habit.</li>
+          <li>Learn the basic movement patterns.</li>
+          <li>Finish every workout feeling like you could do more.</li>
+          <li>Learn how your knee responds over the following 24–48 hours.</li>
+        </ul>
+      </div>
+      <div class="info">
+        <h3>Rules</h3>
+        <ul>
+          <li>Strength effort: about RPE 5–6/10.</li>
+          <li>Full comfortable squat depth is allowed.</li>
+          <li>No sharp pain, catching, instability, or altered movement.</li>
+          <li>Do not train to failure.</li>
+          <li>Conditioning stays easy and controlled.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note"><strong>Knee rule:</strong> The squat itself does not need to hurt to be useful. Track the delayed response the next morning. Mild, temporary ache is information; progressively worsening pain, swelling, instability, locking/catching, or limping is a reason to back off and consider evaluation.</div>
+  </div>
+
+  <div class="phase-start">
+    <h3>Starting Weight Method</h3>
+    <ul>
+      <li>First workout: choose a weight that feels deliberately easy.</li>
+      <li>Target about <strong>RPE 5–6</strong>: finish the set with roughly 4–5 good reps left.</li>
+      <li>If you could do 6+ more reps, increase slightly next set or workout.</li>
+      <li>If you could do only 2–3 more, reduce slightly.</li>
+      <li>Never sacrifice form to make the number work.</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="day-header"><h3>Monday — Squat + Push</h3><p>Full-body foundation</p></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Warm-up</div><div class="detail">Brisk walk; bodyweight squats; hip hinges; glute bridges; arm circles; light rows; slow squats.</div></div><div class="prescription">7 min</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Goblet squat</div><div class="detail">Full comfortable depth. Controlled descent.</div></div><div class="prescription">2 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Dumbbell bench press</div><div class="detail">Smooth reps; stop well before failure.</div></div><div class="prescription">2 × 10</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Romanian deadlift</div><div class="detail">Dumbbells. Hips back; feel hamstrings.</div></div><div class="prescription">2 × 10</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">One-arm dumbbell row</div><div class="detail">Brace and pull toward the hip.</div></div><div class="prescription">2 × 10/side</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Farmer carry</div><div class="detail">Tall posture; controlled walking.</div></div><div class="prescription">3 × 30 sec</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Dead bug</div><div class="detail">Slow, controlled core movement.</div></div><div class="prescription">2 × 6/side</div></div>
+  </div>
+
+  <div class="day">
+    <div class="day-header"><h3>Wednesday — Hinge + Pull</h3><p>Posterior chain and upper body</p></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Dumbbell deadlift</div><div class="detail">Keep the load close; stand tall.</div></div><div class="prescription">2 × 8–10</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Standing dumbbell overhead press</div><div class="detail">Brace your torso; no need to grind.</div></div><div class="prescription">2 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Goblet squat</div><div class="detail">Light exposure; full comfortable depth.</div></div><div class="prescription">2 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">One-arm dumbbell row</div><div class="detail">Controlled pull and lower.</div></div><div class="prescription">2 × 10/side</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Glute bridge</div><div class="detail">Pause briefly at the top.</div></div><div class="prescription">2 × 12</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Suitcase carry</div><div class="detail">One dumbbell; stay upright.</div></div><div class="prescription">2 × 30 sec/side</div></div>
+  </div>
+
+  <div class="day">
+    <div class="day-header"><h3>Friday — Introduction to Conditioning</h3><p>Keep the conditioning deliberately easy.</p></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Goblet squat</div><div class="detail">Light and controlled.</div></div><div class="prescription">2 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Dumbbell bench press</div></div><div class="prescription">2 × 10</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Romanian deadlift</div></div><div class="prescription">2 × 10</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Dumbbell row</div></div><div class="prescription">2 × 10</div></div>
+    <div class="conditioning"><h4>8-minute easy AMRAP</h4><ul><li>6 elevated push-ups</li><li>8 dumbbell deadlifts</li><li>30-second farmer carry</li></ul><p><strong>Goal:</strong> Continuous, comfortable movement. No racing and no squats in the conditioning yet.</p></div>
+  </div>
+</section>
+
+<section id="phase2" class="phase">
+  <div class="hero">
+    <h2>Phase 2 — Build Strength</h2>
+    <div class="weeks">Weeks 3–4</div>
+    <div class="grid">
+      <div class="info">
+        <h3>Goals</h3>
+        <ul>
+          <li>Move from exercise practice into consistent training.</li>
+          <li>Increase most movements to 3 sets.</li>
+          <li>Begin adding weight gradually.</li>
+          <li>Keep the knee response stable as volume increases.</li>
+        </ul>
+      </div>
+      <div class="info">
+        <h3>Rules</h3>
+        <ul>
+          <li>Strength effort: RPE 6–7/10.</li>
+          <li>Usually finish with 3–4 good reps in reserve.</li>
+          <li>Add weight only when technique remains excellent.</li>
+          <li>Don't make up missed workouts.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note"><strong>Progression:</strong> If all reps are clean and you could do another 3–4 reps, add a small amount next time. If form deteriorates or the knee response is worse the next day, keep the same weight or reduce volume.</div>
+  </div>
+
+  <div class="phase-start">
+    <h3>Progression Method</h3>
+    <ul>
+      <li>Work mostly around <strong>RPE 6–7</strong>: about 3–4 good reps left.</li>
+      <li>For rep ranges, use <strong>double progression</strong>: build reps to the top of the range before adding weight.</li>
+      <li>Example: 8/8/8 → 9/8/8 → 10/9/9 → 10/10/10 → add weight.</li>
+      <li>After adding weight, expect reps to fall back toward the lower end.</li>
+    </ul>
+    <p><strong>Knee:</strong> don't increase load and conditioning volume at the same time.</p>
+  </div>
+
+  <div class="day">
+    <div class="day-header"><h3>Monday — Strength A</h3></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Goblet squat</div><div class="detail">Full comfortable depth.</div></div><div class="prescription">3 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Barbell bench press</div></div><div class="prescription">3 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Romanian deadlift</div></div><div class="prescription">3 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">One-arm dumbbell row</div></div><div class="prescription">3 × 10</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Farmer carry</div></div><div class="prescription">3 × 40 sec</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Dead bug</div></div><div class="prescription">2 × 8/side</div></div>
+  </div>
+
+  <div class="day">
+    <div class="day-header"><h3>Wednesday — Strength B</h3></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Goblet squat</div><div class="detail">Controlled, moderate load.</div></div><div class="prescription">3 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Standing dumbbell/barbell overhead press</div></div><div class="prescription">3 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Dumbbell deadlift</div></div><div class="prescription">3 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Dumbbell row</div></div><div class="prescription">3 × 10</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Glute bridge</div></div><div class="prescription">3 × 12</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Suitcase carry</div></div><div class="prescription">3 × 30 sec/side</div></div>
+  </div>
+
+  <div class="day">
+    <div class="day-header"><h3>Friday — Full Body + Conditioning</h3></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Goblet squat</div></div><div class="prescription">3 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Dumbbell bench press</div></div><div class="prescription">3 × 10</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Romanian deadlift</div></div><div class="prescription">3 × 8</div></div>
+    <div class="conditioning"><h4>10-minute AMRAP</h4><ul><li>6 elevated push-ups</li><li>8 dumbbell deadlifts</li><li>10 light dumbbell rows</li><li>30-second farmer carry</li></ul><p><strong>Goal:</strong> Smooth, repeatable rounds. Keep it around 6/10 effort.</p></div>
+  </div>
+</section>
+
+<section id="phase3" class="phase">
+  <div class="hero">
+    <h2>Phase 3 — Introduce the Barbell Squat</h2>
+    <div class="weeks">Weeks 5–6</div>
+    <div class="grid">
+      <div class="info">
+        <h3>Goals</h3>
+        <ul>
+          <li>Introduce light barbell back squats.</li>
+          <li>Build confidence with the barbell.</li>
+          <li>Increase upper-body strength.</li>
+          <li>Keep knee loading predictable and recoverable.</li>
+        </ul>
+      </div>
+      <div class="info">
+        <h3>Rules</h3>
+        <ul>
+          <li>Barbell squat starts very light.</li>
+          <li>RPE roughly 6–7/10.</li>
+          <li>Full comfortable depth remains okay.</li>
+          <li>Wednesday is relatively knee-friendly.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note"><strong>Important:</strong> The purpose of the first barbell squat sessions is not to test strength. It is to learn how your knee responds to a new load and volume.</div>
+  </div>
+
+  <div class="phase-start">
+    <h3>Barbell Starting Weight Method</h3>
+    <ul>
+      <li>Your first barbell squat is a calibration session, not a strength test.</li>
+      <li>Start with an empty bar or another very conservative load.</li>
+      <li>Build in small jumps until the working sets feel around <strong>RPE 6</strong>.</li>
+      <li>Stop adding weight once technique slows or you reach roughly 3–4 reps in reserve.</li>
+      <li>Keep the first few barbell sessions deliberately conservative so you can judge the delayed knee response.</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="day-header"><h3>Monday — Squat Day</h3></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Barbell back squat</div><div class="detail">Full comfortable depth. Start very light.</div></div><div class="prescription">3 × 6</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Barbell bench press</div></div><div class="prescription">3 × 6–8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Romanian deadlift</div></div><div class="prescription">3 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">One-arm dumbbell row</div></div><div class="prescription">3 × 10</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Farmer carry</div></div><div class="prescription">3 × 45 sec</div></div>
+  </div>
+
+  <div class="day">
+    <div class="day-header"><h3>Wednesday — Upper Body Emphasis</h3><p>Give the knees a relative break.</p></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Dumbbell bench press</div></div><div class="prescription">3 × 10</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Standing overhead press</div></div><div class="prescription">3 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Barbell row</div></div><div class="prescription">3 × 8–10</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Romanian deadlift</div></div><div class="prescription">3 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Elevated push-up</div></div><div class="prescription">2 × 10–15</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Suitcase carry</div></div><div class="prescription">3 × 40 sec/side</div></div>
+  </div>
+
+  <div class="day">
+    <div class="day-header"><h3>Friday — Full Body + Conditioning</h3></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Goblet squat</div><div class="detail">Lighter than Monday.</div></div><div class="prescription">3 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Dumbbell bench press</div></div><div class="prescription">3 × 10</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Dumbbell Romanian deadlift</div></div><div class="prescription">3 × 10</div></div>
+    <div class="conditioning"><h4>12-minute AMRAP</h4><ul><li>8 dumbbell deadlifts</li><li>8 elevated push-ups</li><li>10 dumbbell rows</li><li>30-second farmer carry</li><li><strong>Optional:</strong> 6 goblet squats if the knee has been responding well</li></ul><p>Do not add the conditioning squats if your delayed knee response has been questionable.</p></div>
+  </div>
+</section>
+
+<section id="phase4" class="phase">
+  <div class="hero">
+    <h2>Phase 4 — Start Becoming Strong</h2>
+    <div class="weeks">Weeks 7–8</div>
+    <div class="grid">
+      <div class="info">
+        <h3>Goals</h3>
+        <ul>
+          <li>Make the barbell squat a legitimate strength movement.</li>
+          <li>Continue building upper-body strength.</li>
+          <li>Introduce a real CrossFit-style metcon.</li>
+          <li>Finish the 8 weeks fitter and more capable—not beat up.</li>
+        </ul>
+      </div>
+      <div class="info">
+        <h3>Rules</h3>
+        <ul>
+          <li>Strength effort: about RPE 7/10.</li>
+          <li>Still no maxing out or grinding reps.</li>
+          <li>Conditioning is challenging but controlled.</li>
+          <li>Keep monitoring the delayed knee response.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note"><strong>Target feeling:</strong> Finish a workout tired, breathing hard, and satisfied—but still feeling that you could have done another couple of minutes or a few more good reps.</div>
+  </div>
+
+  <div class="phase-start">
+    <h3>Progression Method</h3>
+    <ul>
+      <li>Strength work should generally land around <strong>RPE 7</strong>: about 3 good reps left.</li>
+      <li>Add small amounts of weight only when all prescribed reps are clean.</li>
+      <li>Don't chase PRs during the 8-week foundation program.</li>
+      <li>For the Friday metcon, increase difficulty only if you can maintain good movement and recover normally afterward.</li>
+    </ul>
+  </div>
+
+  <div class="day">
+    <div class="day-header"><h3>Monday — Strength</h3></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Barbell back squat</div><div class="detail">Controlled full comfortable depth.</div></div><div class="prescription">3 × 6</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Barbell bench press</div></div><div class="prescription">3 × 6</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Romanian deadlift</div></div><div class="prescription">3 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Dumbbell row</div></div><div class="prescription">3 × 10</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Farmer carry</div></div><div class="prescription">3 × 60 sec</div></div>
+  </div>
+
+  <div class="day">
+    <div class="day-header"><h3>Wednesday — Upper Body + Hinge</h3><p>Relatively knee-friendly day.</p></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Dumbbell bench press</div></div><div class="prescription">3 × 8–10</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Standing overhead press</div></div><div class="prescription">3 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Barbell row</div></div><div class="prescription">3 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Romanian deadlift</div></div><div class="prescription">3 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Elevated push-ups</div></div><div class="prescription">3 × 10–15</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Suitcase carry</div></div><div class="prescription">3 × 45 sec/side</div></div>
+  </div>
+
+  <div class="day">
+    <div class="day-header"><h3>Friday — CrossFit-Style Conditioning</h3><p>Strength first, then the metcon.</p></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Goblet squat</div></div><div class="prescription">3 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Dumbbell bench press</div></div><div class="prescription">3 × 8</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Romanian deadlift</div></div><div class="prescription">3 × 8</div></div>
+    <div class="conditioning"><h4>15-minute AMRAP</h4><ul><li>8 goblet squats</li><li>8 dumbbell push presses</li><li>10 dumbbell deadlifts</li><li>8 elevated push-ups</li><li>30–40 sec farmer carry</li></ul><p><strong>Target:</strong> About 7/10 effort. Keep moving, but don't race or sacrifice technique.</p></div>
+  </div>
+
+  <div class="day optional">
+    <div class="day-header"><h3>Optional 4th Day — Mobility + Walking</h3><p>This can be done any day, preferably Saturday.</p></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Easy walk</div></div><div class="prescription">10–20 min</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Hip flexor stretch</div></div><div class="prescription">30 sec/side</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Calf stretch</div></div><div class="prescription">30 sec/side</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Hamstring stretch</div></div><div class="prescription">30 sec/side</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Figure-4/glute stretch</div></div><div class="prescription">30 sec/side</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Thoracic rotations</div></div><div class="prescription">8/side</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Shoulder mobility</div></div><div class="prescription">10 reps</div></div>
+    <div class="exercise"><input type="checkbox"><div><div class="name">Deep squat hold</div><div class="detail">Only if comfortable.</div></div><div class="prescription">20–30 sec</div></div>
+  </div>
+</section>
+
+<div class="day optional">
+  <div class="day-header"><h3>RPE Quick Reference</h3><p>Use this when choosing or progressing weights.</p></div>
+  <div class="exercise"><div></div><div><div class="name">RPE 5–6</div><div class="detail">About 4–5 good reps left. Ideal for the first phase.</div></div><div class="prescription">Easy–moderate</div></div>
+  <div class="exercise"><div></div><div><div class="name">RPE 7</div><div class="detail">About 3 good reps left. Your normal target for most strength work.</div></div><div class="prescription">Moderate</div></div>
+  <div class="exercise"><div></div><div><div class="name">RPE 8</div><div class="detail">About 2 good reps left. Occasionally okay later, but not required here.</div></div><div class="prescription">Hard</div></div>
+  <div class="exercise"><div></div><div><div class="name">RPE 9–10</div><div class="detail">0–1 good reps left. Avoid during this 8-week foundation.</div></div><div class="prescription">Too hard</div></div>
+</div>
+
+<div class="day optional">
+  <div class="day-header"><h3>Walking Progression</h3><p>Easy aerobic work; conversational pace.</p></div>
+  <div class="exercise"><div></div><div><div class="name">Weeks 1–2</div></div><div class="prescription">15–20 min × 3</div></div>
+  <div class="exercise"><div></div><div><div class="name">Weeks 3–4</div></div><div class="prescription">20–25 min × 3</div></div>
+  <div class="exercise"><div></div><div><div class="name">Weeks 5–6</div></div><div class="prescription">25–30 min × 3</div></div>
+  <div class="exercise"><div></div><div><div class="name">Weeks 7–8</div></div><div class="prescription">30–40 min × 3</div></div>
+</div>
+
+<div class="footer-note">
+  This program is educational fitness guidance, not a diagnosis or medical treatment plan. If knee symptoms include swelling, locking/catching, instability, significant persistent pain, or worsening function, seek appropriate medical evaluation.<br>
+  Reference only — workouts are logged in Hevy, not here.
+</div>
+</main>
+
 <script src="app.js" defer></script>
 </body>
 </html>

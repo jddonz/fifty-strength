@@ -1,0 +1,10 @@
+{
+  "name": "Fifty Strength",
+  "short_name": "Fifty Strength",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f3f4f6",
+  "theme_color": "#111827",
+  "description": "Privacy-first 8-week strength foundation workout app.",
+  "icons": []
+}

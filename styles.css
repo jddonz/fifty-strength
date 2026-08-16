@@ -129,6 +129,9 @@ main { max-width: 920px; margin: 0 auto; padding: 20px 14px 50px; }
 .optional {
   background: #fffdf7;
 }
+.optional.hidden {
+  display: none;
+}
 .footer-note {
   color: var(--muted);
   text-align: center;

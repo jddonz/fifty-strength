@@ -1,9 +1,11 @@
 const buttons = [...document.querySelectorAll('nav button')];
 const phases = [...document.querySelectorAll('.phase')];
+const mobilityDay = document.getElementById('mobility-day');
 
 function showPhase(id, updateHash) {
   phases.forEach(function (p) { p.classList.toggle('active', p.id === id); });
   buttons.forEach(function (b) { b.classList.toggle('active', b.dataset.phase === id); });
+  if (mobilityDay) mobilityDay.classList.toggle('hidden', id === 'notes');
   if (updateHash) history.replaceState(null, '', '#' + id);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
